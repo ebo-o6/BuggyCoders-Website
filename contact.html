@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,97 +6,107 @@
     <title>Contact Us - BuggyCoders</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" href="./assets/Images/BuggyCoders.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <style>
+      main { flex: 1; }
+      .contact-form h1 { text-align: center; margin-bottom: 20px; color: #fff; font-size: 1.5em; }
+      a:focus-visible, button:focus-visible, input:focus-visible,
+      textarea:focus-visible, select:focus-visible {
+        outline: 3px solid coral; outline-offset: 4px;
+      }
+      .skip-link { position: fixed; top: 10px; left: 10px; z-index: 1000;
+        padding: 12px 20px; background: #fff; color: #212121; transform: translateY(-200%); }
+      .skip-link:focus { transform: translateY(0); }
+      @media (max-width: 1023px) {
+        .learn-more .bottom-cards { flex-wrap: wrap; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html, body, body * { scroll-behavior: auto; }
+        body *, body *::before, body *::after { animation: none !important; transition: none !important; }
+      }
+    </style>
   </head>
 
-  <body>
+  <body id="top">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <a href="./index.html" class="logo"
         ><img
           src="./assets/Images/BuggyCoders.png"
-          alt="Logo"
+          alt=""
           class="logo-image"
         />
         Buggy Coders</a
       >
-      <nav class="navigation">
+      <nav class="navigation" aria-label="Main navigation">
         <a href="./index.html">Home</a>
         <a href="./index.html#about">About</a>
         <a href="./index.html#services">Services</a>
       </nav>
     </header>
 
-    <section class="contact-form">
-      <h2>Contact Us</h2>
-      <form action="#" method="get">
-        <div class="form-group">
-          <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" name="first-name" required />
-        </div>
-        <div class="form-group">
-          <label for="last-name">Last Name:</label>
-          <input type="text" id="last-name" name="last-name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" required />
-        </div>
-        <div class="form-group">
-          <label for="description">Description:</label>
-          <textarea
-            id="description"
-            name="description"
-            rows="4"
-            required
-          ></textarea>
-        </div>
-        <div class="form-group">
-          <label for="heard-about">How did you hear about us?</label>
-          <select id="heard-about" name="heard-about" required>
-            <option value="social-media">Social Media</option>
-            <option value="friend">Friend</option>
-            <option value="search-engine">Search Engine</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <button type="submit" class="main-button">Submit</button>
-      </form>
-    </section>
+    <main id="main-content" tabindex="-1">
+
+    <div class="contact">
+      <section class="contact-form" aria-labelledby="page-title">
+        <h1 id="page-title">Contact Us</h1>
+        <form action="#" method="get">
+          <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" autocomplete="given-name" name="first-name" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" autocomplete="family-name" name="last-name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" autocomplete="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" autocomplete="tel" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="heard-about">How did you hear about us?</label>
+            <select id="heard-about" name="heard-about" required>
+              <option value="social-media">Social Media</option>
+              <option value="friend">Friend</option>
+              <option value="search-engine">Search Engine</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="main-button">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    </main>
 
     <footer class="footer">
       <p class="footer-title">
-        Copyrights © 2025 <span><a href="#">BuggyCoders.</a></span> All Rights
+        Copyrights © 2025 <span><a href="#top">BuggyCoders.</a></span> All Rights
         Reserved
       </p>
 
       <div class="footer-contact">
-        <p><i class="fa-solid fa-phone"></i> +962796535813</p>
+        <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +962796535813</p>
         <p>
-          <i class="fa-solid fa-envelope"></i> buggycoders.official@gmail.com
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i> buggycoders.official@gmail.com
         </p>
       </div>
 
-      <div class="social-icons">
-        <a href="https://buggycoders.itch.io/" target="_blank"
-          ><i class="fa-brands fa-itch-io fa-1x"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/buggycoders.official/"
-          target="_blank"
-          ><i class="fa-brands fa-instagram fa-1x"></i
-        ></a>
-        <a href="https://github.com/BuggyCoders" target="_blank"
-          ><i class="fa-brands fa-github fa-1x"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/buggy-coders-133b49360/"
-          target="_blank"
-          ><i class="fa-brands fa-linkedin fa-1x"></i
-        ></a>
-      </div>
+  
     </footer>
   </body>
 </html>
+

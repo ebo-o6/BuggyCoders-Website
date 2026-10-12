@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,19 +6,40 @@
     <title>Learn More - BuggyCoders</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="icon" href="./assets/Images/BuggyCoders.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <style>
+      .learn-more .info h2 { color: #007acc; font-size: 1.5em; font-weight: 700; margin: 10px; white-space: nowrap; }
+      main { flex: 1; }
+      .contact-form h1 { text-align: center; margin-bottom: 20px; color: #fff; font-size: 1.5em; }
+      a:focus-visible, button:focus-visible, input:focus-visible,
+      textarea:focus-visible, select:focus-visible {
+        outline: 3px solid coral; outline-offset: 4px;
+      }
+      .skip-link { position: fixed; top: 10px; left: 10px; z-index: 1000;
+        padding: 12px 20px; background: #fff; color: #212121; transform: translateY(-200%); }
+      .skip-link:focus { transform: translateY(0); }
+      @media (max-width: 1023px) {
+        .learn-more .bottom-cards { flex-wrap: wrap; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html, body, body * { scroll-behavior: auto; }
+        body *, body *::before, body *::after { animation: none !important; transition: none !important; }
+      }
+    </style>
   </head>
 
-  <body>
+  <body id="top">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <a href="./index.html" class="logo"
         ><img
           src="./assets/Images/BuggyCoders.png"
-          alt="Logo"
+          alt=""
           class="logo-image"
         />
         Buggy Coders</a
       >
-      <nav class="navigation">
+      <nav class="navigation" aria-label="Main navigation">
         <a href="./index.html">Home</a>
         <a href="./index.html#about">About</a>
         <a href="./index.html#services">Services</a>
@@ -26,46 +47,44 @@
       </nav>
     </header>
 
-    <section class="learn-more">
-      <h2 class="title">Meet Our Team</h2>
+    <main id="main-content" tabindex="-1">
+
+    <section class="learn-more" aria-labelledby="page-title">
+      <h1 class="title" id="page-title">Meet Our Team</h1>
       <div class="content">
         <!-- Top Card -->
         <div class="card top-card">
           <div class="icon">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
           </div>
           <div class="info">
-            <h3>Abdullah Tarbooly</h3>
-            <!-- <p>This is a placeholder for a team member yet to be revealed.</p> -->
+            <h2>Abdullah Tarbooly</h2>
           </div>
         </div>
 
         <div class="bottom-cards">
           <div class="card">
             <div class="icon">
-              <i class="fa-solid fa-user"></i>
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
             </div>
             <div class="info">
-              <h3>Ibrahim Al-Najjar</h3>
-              <!-- <p>This is a placeholder for a team member yet to be revealed.</p> -->
+              <h2>Ibrahim Al-Najjar</h2>
             </div>
           </div>
           <div class="card">
             <div class="icon">
-              <i class="fa-solid fa-user"></i>
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
             </div>
             <div class="info">
-              <h3>Yaman Kreshian</h3>
-              <!-- <p>This is a placeholder for a team member yet to be revealed.</p> -->
+              <h2>Yaman Kreshian</h2>
             </div>
           </div>
           <div class="card">
             <div class="icon">
-              <i class="fa-solid fa-user"></i>
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
             </div>
             <div class="info">
-              <h3>Farouq Shaheen</h3>
-              <!-- <p>This is a placeholder for a team member yet to be revealed.</p> -->
+              <h2>Abdulmalik Tarbooly</h2>
             </div>
           </div>
         </div>
@@ -74,75 +93,74 @@
       <div class="bottom-cards">
         <div class="card">
           <div class="icon">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
           </div>
           <div class="info">
-            <h3>Abdullah Shabeeb</h3>
-            <!-- <p>This is a placeholder for a team member yet to be revealed.</p> -->
+            <h2>Abdullah Shabeeb</h2>
           </div>
         </div>
         <div class="card">
           <div class="icon">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
           </div>
           <div class="info">
-            <h3>Hasan Al-Wahsh</h3>
-            <!-- <p>This is a placeholder for a team member yet to be revealed.</p> -->
+            <h2>Hasan Al-Wahsh</h2>
           </div>
         </div>
         <div class="card">
           <div class="icon">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
           </div>
           <div class="info">
-            <h3>Suliman Ashraf</h3>
-            <!-- <p>This is a placeholder for a team member yet to be revealed.</p> -->
+            <h2>Suliman Ashraf</h2>
           </div>
         </div>
 
         <div class="card">
           <div class="icon">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
           </div>
           <div class="info">
-            <h3>Suhaib Momani</h3>
-            <!-- <p>This is a placeholder for a team member yet to be revealed.</p> -->
+            <h2>Suhaib Momani</h2>
           </div>
         </div>
       </div>
     </section>
 
+    </main>
+
     <footer class="footer">
       <p class="footer-title">
-        Copyrights © 2025 <span><a href="#">BuggyCoders.</a></span> All Rights
+        Copyrights © 2025 <span><a href="#top">BuggyCoders.</a></span> All Rights
         Reserved
       </p>
 
       <div class="footer-contact">
-        <p><i class="fa-solid fa-phone"></i> +962796535813</p>
+        <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +962796535813</p>
         <p>
-          <i class="fa-solid fa-envelope"></i> buggycoders.official@gmail.com
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i> buggycoders.official@gmail.com
         </p>
       </div>
 
       <div class="social-icons">
         <a href="https://buggycoders.itch.io/" target="_blank"
-          ><i class="fa-brands fa-itch-io fa-1x"></i
+           rel="noopener noreferrer" aria-label="BuggyCoders on itch.io (opens in a new tab)"><i class="fa-brands fa-itch-io fa-1x" aria-hidden="true"></i
         ></a>
         <a
           href="https://www.instagram.com/buggycoders.official/"
           target="_blank"
-          ><i class="fa-brands fa-instagram fa-1x"></i
+           rel="noopener noreferrer" aria-label="BuggyCoders on Instagram (opens in a new tab)"><i class="fa-brands fa-instagram fa-1x" aria-hidden="true"></i
         ></a>
         <a href="https://github.com/BuggyCoders" target="_blank"
-          ><i class="fa-brands fa-github fa-1x"></i
+           rel="noopener noreferrer" aria-label="BuggyCoders on GitHub (opens in a new tab)"><i class="fa-brands fa-github fa-1x" aria-hidden="true"></i
         ></a>
         <a
           href="https://www.linkedin.com/in/buggy-coders-133b49360/"
           target="_blank"
-          ><i class="fa-brands fa-linkedin fa-1x"></i
+           rel="noopener noreferrer" aria-label="BuggyCoders on LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin fa-1x" aria-hidden="true"></i
         ></a>
       </div>
     </footer>
   </body>
 </html>
+

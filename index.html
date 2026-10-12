@@ -15,19 +15,36 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <title>BuggyCoders</title>
     <link rel="icon" href="./assets/Images/BuggyCoders.png" type="image/png" />
+    <meta name="description" content="BuggyCoders develops games, mobile applications, and responsive websites. Explore our services and meet our team." />
+    <style>
+      /* Preserve the hero styling with a semantic primary heading. */
+      main { flex: 1; }
+      .main h1 { color: #fff; font-size: 1.4em; font-weight: 500; }
+      .main h1 .whatwearedoing {
+        display: flex; margin-top: 10px; color: #007acc;
+        font-size: 3em; font-weight: 600;
+      }
+      a:focus-visible { outline: 3px solid coral; outline-offset: 5px; }
+      @media (prefers-reduced-motion: reduce) {
+        html, body, body * { scroll-behavior: auto; }
+        body *, body *::before, body *::after {
+          animation: none !important; transition: none !important;
+        }
+      }
+    </style>
   </head>
 
-  <body>
+  <body id="top">
     <header>
-      <a href="#" class="logo"
+      <a href="#top" class="logo"
         ><img
           src="./assets/Images/BuggyCoders.png"
-          alt="Logo"
+          alt=""
           class="logo-image"
         />
         Buggy Coders
       </a>
-      <nav class="navigation">
+      <nav class="navigation" aria-label="Main navigation">
         <a href="#top">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
@@ -35,35 +52,36 @@
       </nav>
     </header>
 
-    <section class="main">
+    <main id="main-content">
+    <section class="main" aria-labelledby="hero-title">
       <div>
-        <h2>
+        <h1 id="hero-title">
           Hello, Welcome to <span class="h2color">BuggyCoders Website!</span>
           <span class="whatwearedoing">Into Developing Software</span>
-        </h2>
+        </h1>
         <h3>Dedicated to creating innovative software solutions.</h3>
         <a href="./contact.html" class="main-button"
-          >Get in touch <i class="fa-solid fa-arrow-right"></i
+          >Get in touch <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
         ></a>
         <div class="social-icons">
           <a href="https://buggycoders.itch.io/" target="_blank"
-            ><i class="fa-brands fa-itch-io fa-2x"></i
+             rel="noopener noreferrer" aria-label="BuggyCoders on itch.io (opens in a new tab)"><i class="fa-brands fa-itch-io fa-2x" aria-hidden="true"></i
           ></a>
           <a
             href="https://www.instagram.com/buggycoders.official/"
             target="_blank"
-            ><i class="fa-brands fa-instagram fa-2x"></i
+             rel="noopener noreferrer" aria-label="BuggyCoders on Instagram (opens in a new tab)"><i class="fa-brands fa-instagram fa-2x" aria-hidden="true"></i
           ></a>
           <a href="https://github.com/BuggyCoders" target="_blank"
-            ><i class="fa-brands fa-github fa-2x"></i
+             rel="noopener noreferrer" aria-label="BuggyCoders on GitHub (opens in a new tab)"><i class="fa-brands fa-github fa-2x" aria-hidden="true"></i
           ></a>
           <a
             href="https://www.linkedin.com/in/buggy-coders-133b49360/"
             target="_blank"
-            ><i class="fa-brands fa-linkedin fa-2x"></i
+             rel="noopener noreferrer" aria-label="BuggyCoders on LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin fa-2x" aria-hidden="true"></i
           ></a>
           <a href="https://www.youtube.com/@buggycoders" target="_blank"
-            ><i class="fa-brands fa-youtube fa-2x"></i
+             rel="noopener noreferrer" aria-label="BuggyCoders on YouTube (opens in a new tab)"><i class="fa-brands fa-youtube fa-2x" aria-hidden="true"></i
           ></a>
         </div>
       </div>
@@ -74,7 +92,7 @@
 
       <div class="about-container">
         <div class="about-logo">
-          <img src="./assets/Images/BuggyCoders.png" alt="Buggy Coders Logo" />
+          <img src="./assets/Images/BuggyCoders.png" alt="Buggy Coders Logo" loading="lazy" decoding="async" />
         </div>
         <div class="about-text">
           <p>
@@ -92,7 +110,7 @@
             individuals.
           </p>
           <a href="./learn-more.html" class="main-button"
-            >Learn More<i class="fa-solid fa-arrow-right"></i
+            >Learn More<i class="fa-solid fa-arrow-right" aria-hidden="true"></i
           ></a>
         </div>
       </div>
@@ -104,7 +122,7 @@
         <div class="card">
           <a href="./projects.html" class="card-link">
             <div class="icon">
-              <i class="fa-solid fa-gamepad"></i>
+              <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
             </div>
             <div class="info">
               <h3>Game Development</h3>
@@ -118,9 +136,9 @@
 
         <div class="card">
           <div class="icon">
-            <i class="fa-brands fa-android"></i>
+            <i class="fa-brands fa-android" aria-hidden="true"></i>
             <span>/</span>
-            <i class="fa-brands fa-apple"></i>
+            <i class="fa-brands fa-apple" aria-hidden="true"></i>
           </div>
           <div class="info">
             <h3>App Development</h3>
@@ -133,7 +151,7 @@
 
         <div class="card">
           <div class="icon">
-            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
           </div>
           <div class="info">
             <h3>Web Development</h3>
@@ -146,38 +164,41 @@
       </div>
     </section>
 
+    </main>
+
     <footer class="footer">
       <p class="footer-title">
-        Copyrights © 2025 <span><a href="#">BuggyCoders.</a></span> All Rights
+        Copyrights © 2025 <span><a href="#top">BuggyCoders.</a></span> All Rights
         Reserved
       </p>
       <div class="footer-contact">
-        <p><i class="fa-solid fa-phone"></i> +962796535813</p>
+        <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +962796535813</p>
         <p>
-          <i class="fa-solid fa-envelope"></i> buggycoders.official@gmail.com
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i> buggycoders.official@gmail.com
         </p>
       </div>
       <div class="social-icons">
         <a href="https://buggycoders.itch.io/" target="_blank"
-          ><i class="fa-brands fa-itch-io fa-1x"></i
+           rel="noopener noreferrer" aria-label="BuggyCoders on itch.io (opens in a new tab)"><i class="fa-brands fa-itch-io fa-1x" aria-hidden="true"></i
         ></a>
         <a
           href="https://www.instagram.com/buggycoders.official/"
           target="_blank"
-          ><i class="fa-brands fa-instagram fa-1x"></i
+           rel="noopener noreferrer" aria-label="BuggyCoders on Instagram (opens in a new tab)"><i class="fa-brands fa-instagram fa-1x" aria-hidden="true"></i
         ></a>
         <a href="https://github.com/BuggyCoders" target="_blank"
-          ><i class="fa-brands fa-github fa-1x"></i
+           rel="noopener noreferrer" aria-label="BuggyCoders on GitHub (opens in a new tab)"><i class="fa-brands fa-github fa-1x" aria-hidden="true"></i
         ></a>
         <a
           href="https://www.linkedin.com/in/buggy-coders-133b49360/"
           target="_blank"
-          ><i class="fa-brands fa-linkedin fa-1x"></i
+           rel="noopener noreferrer" aria-label="BuggyCoders on LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin fa-1x" aria-hidden="true"></i
         ></a>
         <a href="https://www.youtube.com/@buggycoders" target="_blank"
-          ><i class="fa-brands fa-youtube fa-1x"></i
+           rel="noopener noreferrer" aria-label="BuggyCoders on YouTube (opens in a new tab)"><i class="fa-brands fa-youtube fa-1x" aria-hidden="true"></i
         ></a>
       </div>
     </footer>
   </body>
 </html>
+

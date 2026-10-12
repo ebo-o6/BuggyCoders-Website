@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,15 +6,73 @@
     <title>Projects - BuggyCoders</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="icon" href="./assets/Images/BuggyCoders.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <style>
+      .project-title {
+        font-size: 1em;
+      }
+      main {
+        flex: 1;
+      }
+      .contact-form h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+        font-size: 1.5em;
+      }
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible,
+      select:focus-visible {
+        outline: 3px solid coral;
+        outline-offset: 4px;
+      }
+      .skip-link {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+        padding: 12px 20px;
+        background: #fff;
+        color: #212121;
+        transform: translateY(-200%);
+      }
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+      @media (max-width: 1023px) {
+        .learn-more .bottom-cards {
+          flex-wrap: wrap;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html,
+        body,
+        body * {
+          scroll-behavior: auto;
+        }
+        body *,
+        body *::before,
+        body *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
   </head>
 
-  <body>
+  <body id="top">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <a href="./index.html" class="logo"
-        ><img src="./assets/Images/BuggyCoders.png" alt="Logo" class="logo-image" />
+        ><img src="./assets/Images/BuggyCoders.png" alt="" class="logo-image" />
         Buggy Coders</a
       >
-      <nav class="navigation">
+      <nav class="navigation" aria-label="Main navigation">
         <a href="./index.html">Home</a>
         <a href="./index.html#about">About</a>
         <a href="./index.html#services">Services</a>
@@ -22,72 +80,166 @@
       </nav>
     </header>
 
-    <section class="projects" id="projects">
-      <h2 class="title">Projects</h2>
-      <div class="content">
-        <div class="project-card">
-          <div class="project-image">
-            <a
-              href="https://buggycoders.itch.io/endless-weakness"
-              target="_blank"
-              ><img src="./assets/Images/GameProject.png"
-            /></a>
-          </div>
-          <div class="project-info">
-            <p class="project-category">Games</p>
-            <strong class="project-title">
-              <span>Endless Weakness</span>
+    <main id="main-content" tabindex="-1">
+      <section class="projects" id="projects" aria-labelledby="page-title">
+        <h1 class="title" id="page-title">Projects</h1>
+        <div class="content">
+          <div class="project-card">
+            <div class="project-image">
               <a
                 href="https://buggycoders.itch.io/endless-weakness"
                 target="_blank"
-                class="more-details"
-                >More details</a
-              >
-            </strong>
+                rel="noopener noreferrer"
+                aria-label="Endless Weakness on itch.io (opens in a new tab)"
+                ><img
+                  src="./assets/Images/GameProject.png"
+                  alt="Endless Weakness game artwork"
+                  loading="lazy"
+                  decoding="async"
+              /></a>
+            </div>
+            <div class="project-info">
+              <p class="project-category">Games</p>
+              <h2 class="project-title">
+                <span>Endless Weakness</span>
+                <a
+                  href="https://buggycoders.itch.io/endless-weakness"
+                  target="_blank"
+                  class="more-details"
+                  rel="noopener noreferrer"
+                  aria-label="Endless Weakness on itch.io (opens in a new tab)"
+                  >More details</a
+                >
+              </h2>
+            </div>
           </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.buggycoders.chickyrun"
-              target="_blank"
-              ><img src="./assets/Images/ChickyRun.png"
-            /></a>
-          </div>
-          <div class="project-info">
-            <p class="project-category">Games</p>
-            <strong class="project-title">
-              <span>Chicky Run</span>
+          <div class="project-card">
+            <div class="project-image">
               <a
                 href="https://play.google.com/store/apps/details?id=com.buggycoders.chickyrun"
-                class="more-details"
-                >More details</a
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chicky Run on Google Play (opens in a new tab)"
+                ><img
+                  src="./assets/Images/ChickyRun.png"
+                  alt="Chicky Run game artwork"
+                  loading="lazy"
+                  decoding="async"
+              /></a>
+            </div>
+            <div class="project-info">
+              <p class="project-category">Games</p>
+              <h2 class="project-title">
+                <span>Chicky Run</span>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.buggycoders.chickyrun"
+                  class="more-details"
+                  >More details</a
+                >
+              </h2>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <a
+                href="https://zunbarak.itch.io/nashama-tactics"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Nashama Tactics on itch.io (opens in a new tab)"
               >
-            </strong>
+                <img
+                  src="https://img.itch.zone/aW1nLzI4MTU3NzY4LnBuZw==/315x250%23c/z%2FDZGN.png"
+                  alt="Nashama Tactics game artwork"
+                  width="315"
+                  height="250"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+            </div>
+            <div class="project-info">
+              <p class="project-category">Card Game / Strategy</p>
+              <h2 class="project-title">
+                <span>Nashama Tactics</span>
+                <a
+                  href="https://zunbarak.itch.io/nashama-tactics"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="more-details"
+                  aria-label="More details about Nashama Tactics (opens in a new tab)"
+                  >More details</a
+                >
+              </h2>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <a
+                href="https://zunbarak.itch.io/deadbox"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="DeadBox on itch.io (opens in a new tab)"
+              >
+                <img
+                  src="https://img.itch.zone/aW1nLzIyODMzNTA2LnBuZw==/315x250%23c/ZL%2B%2B9t.png"
+                  alt="DeadBox game artwork"
+                  width="315"
+                  height="250"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+            </div>
+            <div class="project-info">
+              <p class="project-category">Puzzle / Platformer</p>
+              <h2 class="project-title">
+                <span>DeadBox</span>
+                <a
+                  href="https://zunbarak.itch.io/deadbox"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="more-details"
+                  aria-label="More details about DeadBox (opens in a new tab)"
+                  >More details</a
+                >
+              </h2>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer class="footer">
       <p class="footer-title">
-        Copyrights © 2023 <span><a href="#">BuggyCoders.</a></span> All Rights
-        Reserved
+        Copyrights © 2023 <span><a href="#top">BuggyCoders.</a></span> All
+        Rights Reserved
       </p>
       <div class="social-icons">
-        <a href="https://buggycoders.itch.io/" target="_blank"
-          ><i class="fa-brands fa-itch-io fa-1x"></i
+        <a
+          href="https://buggycoders.itch.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="BuggyCoders on itch.io (opens in a new tab)"
+          ><i class="fa-brands fa-itch-io fa-1x" aria-hidden="true"></i
         ></a>
-        <a href="https://www.instagram.com/buggycoders.official/"
-          ><i class="fa-brands fa-instagram fa-1x"></i
+        <a
+          href="https://www.instagram.com/buggycoders.official/"
+          aria-label="BuggyCoders on Instagram"
+          ><i class="fa-brands fa-instagram fa-1x" aria-hidden="true"></i
         ></a>
-        <a href="https://github.com/BuggyCoders" target="_blank"
-          ><i class="fa-brands fa-github fa-1x"></i
+        <a
+          href="https://github.com/BuggyCoders"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="BuggyCoders on GitHub (opens in a new tab)"
+          ><i class="fa-brands fa-github fa-1x" aria-hidden="true"></i
         ></a>
         <a
           href="https://www.linkedin.com/in/buggy-coders-133b49360/"
           target="_blank"
-          ><i class="fa-brands fa-linkedin fa-1x"></i
+          rel="noopener noreferrer"
+          aria-label="BuggyCoders on LinkedIn (opens in a new tab)"
+          ><i class="fa-brands fa-linkedin fa-1x" aria-hidden="true"></i
         ></a>
       </div>
     </footer>
